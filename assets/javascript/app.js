@@ -3,6 +3,7 @@ $(function(){
 let win = 0;
 let loss = 0;
 let unanswered = 0;
+var selectedAnswer;
 
 //our questions in an array
 //change the answer format so it only requires on value
@@ -23,24 +24,24 @@ function startGame() {
 
 }
 
-//+++++++++++ Button Assignment ++++++++++++++//
-$("button").on("click", function() {
-    //if wrong button clicked then 
-    if($("#wrong") === 0) {
-        //track loss
-        loss++;
-        $()
-    }
-        
-    //if no button clicked then
-        //track unanswered
-    //if correct button clicked then
-        //track wins
+//+++++++++++ Button Assignments ++++++++++++++//
 
-
-})
-
+//if wrong answer clicked
+$("#submit").on("click", function(){
+   selectedAnswer = $('input[name=options]:checked').val();
    
+
+   if(selectedAnswer === selectedAnswer.val(wrong)) {
+       loss++
+       console.log("one more drop " + loss);
+   }
+   
+
+});
+
+
+
+
 
 
 
