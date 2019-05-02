@@ -17,32 +17,168 @@
     <title>Jaws Trivia</title>
 </head>
 <body>
+    <header class="header text-center">
+        <h1>The Jaws Trivia Game</h1>
+    </header>
     <div class="container">
         <!-- Timer Holder -->
         <div class="row">
             <div class="col-4"></div>
-            <div class="col-4 my-5" id="timer"><h1>Timer 0</h1></div>
+            <div class="col-4 my-5 text-center" id="timer"></div>
             <div class="col-4"></div>
         </div>
-
+        <div class="questions">
         <!-- Question Container -->
         <div class="row">
-            <div class="col-12 text-center my-3" id="questionPlaceHolder"><h1>Question Place Holder</h1></div>
+            <div class="col-12 text-center my-3" id="questionPlaceHolder"><h2>What does Amity mean?</h2></div>
         </div>
 
         <!-- Question Button Holder -->
         <div class="row">
             <div class="col-4"></div>
-            <div class="col-4" id="buttonPlaceHolder">
-                <div class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action">question 1</button>
-                    <button type="button" class="list-group-item list-group-item-action">question 2</button>
-                    <button type="button" class="list-group-item list-group-item-action">question 3</button>
-                    <button type="button" class="list-group-item list-group-item-action">question 4</button>
+            <div class="col-4 text-center my-2 mb-3" id="buttonPlaceHolder">
+
+                <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-light btn-lg ">
+                      <input type="radio" name="options" id="option1" autocomplete="off" data-type="wrong"> Ill-will
+                    </label>
+                    <label class="btn btn-light btn-lg">
+                      <input type="radio" name="options" id="option2" autocomplete="off" data-type="right"> Friendship
+                    </label>
+                    <label class="btn btn-light btn-lg">
+                      <input type="radio" name="options" id="option3" autocomplete="off" data-type="wrong"> A miracle
+                    </label>
+                    <label class="btn btn-light btn-lg">
+                      <input type="radio" name="options" id="option3" autocomplete="off" data-type="wrong"> A woman's name
+                    </label>
                 </div>
+                
             </div>
             <div class="col-4"></div>
         </div>
+         <!-- Question Container -->
+         <div class="row">
+                <div class="col-12 text-center my-3" id="questionPlaceHolder"><h2>What song does Quint always sing?</h2></div>
+            </div>
+    
+            <!-- Question Button Holder -->
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 my-2 mb-3 text-center" id="buttonPlaceHolder">
+
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light btn-lg ">
+                          <input type="radio" name="options" id="option1" autocomplete="off" data-type="wrong"> Barenaked Ladies
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option2" autocomplete="off" data-type="wrong"> Ladies from Maine
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option3" autocomplete="off" data-type="right"> Ladies of Spain
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option3" autocomplete="off" data-type="wrong"> Adieu to You
+                        </label>
+                    </div>
+                   
+                </div>
+                <div class="col-4"></div>
+            </div>
+             <!-- Question Container -->
+        <div class="row">
+                <div class="col-12 text-center my-3" id="questionPlaceHolder"><h2>Mrs. Kintner sets a bounty of ________ to catch the shark.</h2></div>
+            </div>
+    
+            <!-- Question Button Holder -->
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 my- mb-3 text-center" id="buttonPlaceHolder">
+
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option1" autocomplete="off" data-type="wrong"> $1000
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option2" autocomplete="off" data-type="wrong"> $2000
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option3" autocomplete="off" data-type="right"> $3000
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option3" autocomplete="off" data-type="wrong"> $4000
+                        </label>
+                    </div>
+
+                </div>
+                <div class="col-4"></div>
+            </div>
+             <!-- Question Container -->
+        <div class="row">
+                <div class="col-12 text-center my-3" id="questionPlaceHolder"><h2>What was the loving nickname given to the mechanical shark prop used in the film?</h2></div>
+            </div>
+    
+            <!-- Question Button Holder -->
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 my-2 mb-3 text-center" id="buttonPlaceHolder">
+
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option1" autocomplete="off" data-type="wrong"> Rob
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option2" autocomplete="off" data-type="wrong"> Barry
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option3" autocomplete="off" data-type="wrong"> Gordon
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="option3" autocomplete="off" data-type="right"> Bruce
+                        </label>
+                    </div>
+                    
+                </div>
+                <div class="col-4"></div>
+            </div>
+             <!-- Question Container -->
+        <div class="row"> 
+                <div class="col-12 text-center my-3" id="questionPlaceHolder"><h2>Who says the line: "That's some bad hat, Harry"?</h2></div>
+            </div>
+    
+            <!-- Question Button Holder -->
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 my-2 mb-3 text-center" id="buttonPlaceHolder">
+
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="right" autocomplete="off" data-type="right"> Chief Brody
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="wrong" autocomplete="off" data-type="wrong"> Larry Vaughn
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="wrong" autocomplete="off" data-type="wrong"> Matt Hooper
+                        </label>
+                        <label class="btn btn-light btn-lg">
+                          <input type="radio" name="options" id="wrong" autocomplete="off" data-type="wrong"> Sam Quint
+                        </label>
+                    </div>
+
+                </div>
+                <div class="col-4"></div>
+            </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <input class="btn btn-lg btn-primary my-5" type="submit" value="Take Me Home">
+            </div>
+        </div>
+    </div>
+     <!-- Question container end -->
+
+     <div class="last-card">
+         
+     </div>
     </div>
 <!-- Boostrap JS CDN  -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
