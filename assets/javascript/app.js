@@ -4,14 +4,15 @@ let win = 0;
 let loss = 0;
 let unanswered = 0;
 
+//variables for each correct answer
 var answer1;
 var answer2;
 var answer3;
 var answer4;
 var answer5;
-//our questions in an array
-//change the answer format so it only requires on value
-var counter = 60;
+
+//timer variables
+var counter = 30;
 var intervalId;
 
 
@@ -29,13 +30,13 @@ function startGame() {
       //uncheck answers
 
     //reset timer
-      counter = 60;
+      counter = 30;
 
 
 }
-startGame();
+
 //++++++++++++ Page Timer ++++++++++++++++++//
-//60 second timer counting down
+//30 second timer counting down
 
 function startTimer() {
     stop();
@@ -52,7 +53,7 @@ function decrement() {
         stop();
 
         //show scores
-        $()
+        
         
         }
 
@@ -65,6 +66,7 @@ function stop() {
 
 
 startTimer();
+startGame();
 
 
 //+++++++++++ Button Assignments ++++++++++++++//
@@ -129,12 +131,16 @@ $("#submit").on("click", function(){
 
    stop();
 
-   //showing score
-   let scoreCard = $("#score").append("<h1>Wins: " + win + "</h1><br><h1>Loss: " + loss + "</h1><br><h1>Unanswered: " + unanswered + "</h1>");
-   
-   
+   //display score variable
+    let scoreCard = 
+    $("#score").append(
+    "<h1>Wins: " + win + "</h1><br><h1>Loss: " + loss + "</h1><br><h1>Unanswered: " + unanswered + "</h1>");
 
-   //how to stop submit button from appending more
+   //showing score
+   scoreCard.show();
+ 
+
+   //how to stop submit button from appending more?
    setTimeout(hideScore(), 10000);
 
    function hideScore() {

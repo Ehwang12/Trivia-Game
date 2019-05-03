@@ -6,3 +6,10 @@
 body {
     background-color: #49beb7;
 }
+
+.header {
+    font-family: 'Alfa Slab One', cursive;
+    color: #fad284;
+    padding: 4rem;
+    background-image: url(../images/header_bg.png);
+    background-size: cover;
