@@ -73,7 +73,7 @@ startTimer();
 //+++++++++++ Button Assignments ++++++++++++++//
 
 //button event handler
-$("#submit").on("click", function(){
+$(document).on("click", "#submit", function(){
     answer1 = $("#correct1");
     answer2 = $("#correct2");
     answer3 = $("#correct3");
@@ -140,13 +140,19 @@ $("#submit").on("click", function(){
    
 });
 
-$("#reset").on("click", function() {
+$(document).on("click", "#reset", function() {
     //reset questions | in this case I used reload page but there's probably a better solution
     let scoreCard = $("#score");
     scoreCard.hide();
     
     //uncheck all buttons
-    $("input[type='radio']:checked").prop("checked", false);
+
+    //possible solution to unchecking buttons
+    //uncheck question 1
+    
+    $("#uncheckUse").removeClass("active");
+
+
 
     startGame();
 });
