@@ -148,9 +148,9 @@ $(document).on("click", "#reset", function() {
     //uncheck all buttons
 
     //possible solution to unchecking buttons
-    //uncheck question 1
     
-    $("#uncheckUse").removeClass("active");
+    //uncheck questions
+    //$("#uncheckUse").removeClass("active");
 
 
 
