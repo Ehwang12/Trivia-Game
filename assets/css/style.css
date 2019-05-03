@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #49beb7;
+    background-image: url(../images/repeatingwater.jpg);
 }
 
 .header {
@@ -13,3 +13,8 @@ body {
     padding: 4rem;
     background-image: url(../images/header_bg.png);
     background-size: cover;
+}
+
+.container {
+    background-color: #49beb7;
+}
