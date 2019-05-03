@@ -11,35 +11,33 @@ var answer4;
 var answer5;
 //our questions in an array
 //change the answer format so it only requires on value
+var counter = 60;
+var intervalId;
 
 
-
+function startGame() {
 //start game function
 
 
     //reset player score
-      //win = 0;
-      //loss = 0;
-      //unanswered = 0;
+      win = 0;
+      loss = 0;
+      unanswered = 0;
+    
 
     //reset questions
       //uncheck answers
 
     //reset timer
-      //counter = 60;
-    
+      counter = 60;
 
 
+}
+startGame();
 //++++++++++++ Page Timer ++++++++++++++++++//
 //60 second timer counting down
-var counter = 10;
-var intervalId;
 
-
-
-
-
-function start() {
+function startTimer() {
     stop();
     intervalId = setInterval(decrement, 1000);
     }
@@ -52,10 +50,10 @@ function decrement() {
     
     if(counter === 0) {
         stop();
-        $(".questionsContainer").hide();
-       
-        //go to score tracker card
-        scoreCard();
+
+        //show scores
+        $()
+        
         }
 
     }
@@ -66,23 +64,7 @@ function stop() {
     }
 
 
-start();
-
-function scoreCard() {
-    //create div to put elements in
-    let scoreCard = $("<div class='row'>");
-    let winsDiv = $("<div class='col-12 text-center'>");
-    
-    scoreCard.append(winsDiv);
-        
-    //put wins in element
-    let wins = winsDiv.append("<h1>Wins: " + win + "</h1>");
-    //append win score to DOM
-    $(".questionsContainer").append(wins);
-
-
-}
-
+startTimer();
 
 
 //+++++++++++ Button Assignments ++++++++++++++//
@@ -140,28 +122,28 @@ $("#submit").on("click", function(){
        
    }
 
-   $(".questionsContainer").hide();
-
-   stop();
-
-   scoreCard();
-  
-});
-
-
-
-
-//if no answers clicked:
+   //if no answers clicked:
    //unanswered++;
    //update counter;
    //display counter;
 
+   stop();
 
+   //showing score
+   let scoreCard = $("#score").append("<h1>Wins: " + win + "</h1><br><h1>Loss: " + loss + "</h1><br><h1>Unanswered: " + unanswered + "</h1>");
+   
+   
 
+   //how to stop submit button from appending more
+   setTimeout(hideScore(), 10000);
 
-
-
-
+   function hideScore() {
+    scoreCard.hide();
+   }
+   
+   startGame();
+  
+});
 
 
 })
