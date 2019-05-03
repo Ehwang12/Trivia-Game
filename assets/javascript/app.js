@@ -3,7 +3,7 @@ $(function(){
 let win = 0;
 let loss = 0;
 let unanswered = 0;
-
+let scoreCard;
 //variables for each correct answer
 var answer1;
 var answer2;
@@ -19,18 +19,17 @@ var intervalId;
 function startGame() {
 //start game function
 
-
+    startTimer();
+    
     //reset player score
       win = 0;
       loss = 0;
       unanswered = 0;
     
-
-    //reset questions
-      //uncheck answers
-
     //reset timer
       counter = 30;
+
+    
 
 
 }
@@ -53,7 +52,9 @@ function decrement() {
         stop();
 
         //show scores
-        
+            //update wins
+            //update loss
+            //update unanswered
         
         }
 
@@ -66,7 +67,7 @@ function stop() {
 
 
 startTimer();
-startGame();
+
 
 
 //+++++++++++ Button Assignments ++++++++++++++//
@@ -115,7 +116,7 @@ $("#submit").on("click", function(){
        
    }
    
-   if(answer5 .is(':checked')) {
+   if(answer5.is(':checked')) {
        win++;
 
    } else {
@@ -130,25 +131,24 @@ $("#submit").on("click", function(){
    //display counter;
 
    stop();
-
-   //display score variable
-    let scoreCard = 
-    $("#score").append(
-    "<h1>Wins: " + win + "</h1><br><h1>Loss: " + loss + "</h1><br><h1>Unanswered: " + unanswered + "</h1>");
-
-   //showing score
-   scoreCard.show();
- 
-
-   //how to stop submit button from appending more?
-   setTimeout(hideScore(), 10000);
-
-   function hideScore() {
-    scoreCard.hide();
-   }
    
-   startGame();
-  
+   //how to stop submit button from appending more?
+   let scoreCard = $("#score");
+   //display score variable
+    scoreCard.append("<h1>Wins: " + win + "</h1><br><h1>Loss: " + loss + "</h1><br><h1>Unanswered: " + unanswered + "</h1>");
+
+   
+});
+
+$("#reset").on("click", function() {
+    //reset questions | in this case I used reload page but there's probably a better solution
+    let scoreCard = $("#score");
+    scoreCard.hide();
+    
+    //uncheck all buttons
+    $("input[type='radio']:checked").prop("checked", false);
+
+    startGame();
 });
 
 
