@@ -30,8 +30,6 @@ function startGame() {
       counter = 30;
 
     
-
-
 }
 
 //++++++++++++ Page Timer ++++++++++++++++++//
